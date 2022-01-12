@@ -31,7 +31,7 @@ function generateBingo() {
     return;
   }
   let words = wordsInput.split('\n')
-    .map((str) => {return str.trim();})
+    .map((str) => {return str.trim().split(' ')[0];})
     .filter((str) => {return str !== '';});
   const table = document.querySelector('#bingoSheet');
   table.innerHTML = '';
